@@ -2,7 +2,7 @@
 const aws = require('aws-sdk')
 const email = "xxxxxxx@fromyourmail"
 
-exports.handle = function(event, context, cb) {
+exports.handler = function(event, context, cb) {
   const ses = new aws.SES({ apiVersion: '2010-12-01' })
 
   const to = (event.to instanceof Array) ? event.to : [event.to]
